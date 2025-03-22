@@ -11,9 +11,8 @@ jobs:
   test:
     env:
       MONGODB_CLUSTER_ADDRESS: blog-site.udohewj.mongodb.net
-      MONGODB_USERNAME: JacceyCode
-      MONGODB_PASSWORD: bAlcwcE7SwqyMR5i
-      # MONGODB_PASSWORD: mongodb+srv://JacceyCode:bAlcwcE7SwqyMR5i@blog-site.udohewj.mongodb.net/
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
     environment: testing
     runs-on: ubuntu-latest
     steps:
